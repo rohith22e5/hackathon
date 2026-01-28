@@ -5,27 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 const subjects = [
   {
-    id: "math",
-    name: "Mathematics",
-    icon: "🔢",
-    color: "from-blue-500 to-cyan-500",
-    progress: 65,
-  },
-  {
-    id: "physics",
-    name: "Physics",
-    icon: "⚛️",
-    color: "from-purple-500 to-pink-500",
-    progress: 42,
-  },
-  {
-    id: "chemistry",
-    name: "Chemistry",
-    icon: "🧪",
-    color: "from-green-500 to-emerald-500",
-    progress: 78,
-  },
-  {
     id: "biology",
     name: "Biology",
     icon: "🧬",

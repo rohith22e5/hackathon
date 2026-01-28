@@ -1,5 +1,5 @@
 import { Home, ShoppingBag, Gamepad2, User } from "lucide-react";
-import { NavLink } from "@/components/NavLink";
+import { NavLink } from "./NavLink";
 
 const BottomNav = () => {
   const navItems = [

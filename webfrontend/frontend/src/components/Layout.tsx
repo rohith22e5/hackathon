@@ -1,6 +1,6 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import BottomNav from "./BottomNav";
-import AIChatbot from "./AIChatbot";
+import ChatWidget from "./ChatWidget";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen bg-background">
       {children}
-      <AIChatbot />
+      <ChatWidget />
       <BottomNav />
     </div>
   );

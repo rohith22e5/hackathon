@@ -5,45 +5,12 @@ import { Progress } from "@/components/ui/progress";
 import { ArrowLeft, PlayCircle, BookOpen } from "lucide-react";
 
 const subjectData: Record<string, any> = {
-  math: {
-    name: "Mathematics",
-    icon: "🔢",
-    color: "from-blue-500 to-cyan-500",
-    topics: [
-      { id: 1, title: "Algebra Basics", progress: 100, lessons: 12 },
-      { id: 2, title: "Geometry", progress: 75, lessons: 10 },
-      { id: 3, title: "Calculus Intro", progress: 40, lessons: 15 },
-      { id: 4, title: "Statistics", progress: 0, lessons: 8 },
-    ],
-  },
-  physics: {
-    name: "Physics",
-    icon: "⚛️",
-    color: "from-purple-500 to-pink-500",
-    topics: [
-      { id: 1, title: "Mechanics", progress: 60, lessons: 14 },
-      { id: 2, title: "Thermodynamics", progress: 30, lessons: 10 },
-      { id: 3, title: "Electromagnetism", progress: 0, lessons: 12 },
-    ],
-  },
-  chemistry: {
-    name: "Chemistry",
-    icon: "🧪",
-    color: "from-green-500 to-emerald-500",
-    topics: [
-      { id: 1, title: "Atomic Structure", progress: 90, lessons: 8 },
-      { id: 2, title: "Chemical Bonding", progress: 80, lessons: 10 },
-      { id: 3, title: "Organic Chemistry", progress: 50, lessons: 15 },
-    ],
-  },
   biology: {
     name: "Biology",
     icon: "🧬",
     color: "from-orange-500 to-red-500",
     topics: [
-      { id: 1, title: "Cell Biology", progress: 70, lessons: 12 },
-      { id: 2, title: "Genetics", progress: 45, lessons: 10 },
-      { id: 3, title: "Evolution", progress: 0, lessons: 8 },
+      { id: 1, title: "Anatomy", progress: 0, lessons: 8 },
     ],
   },
 };
@@ -92,7 +59,10 @@ const SubjectDetail = () => {
             <PlayCircle className="w-4 h-4" />
             Watch Lesson
           </button>
-          <button className="bg-white/10 hover:bg-white/20 backdrop-blur text-primary-foreground rounded-xl p-3 text-sm font-medium transition-all flex items-center justify-center gap-2">
+          <button 
+            className="bg-white/10 hover:bg-white/20 backdrop-blur text-primary-foreground rounded-xl p-3 text-sm font-medium transition-all flex items-center justify-center gap-2"
+            onClick={() => navigate(`/subject/${subjectId}/anatomy/notes`)}
+          >
             <BookOpen className="w-4 h-4" />
             Read Notes
           </button>
@@ -107,6 +77,7 @@ const SubjectDetail = () => {
             <Card
               key={topic.id}
               className="p-4 shadow-card gradient-card border-border hover:border-accent/50 transition-all cursor-pointer"
+              onClick={() => navigate(`/subject/${subjectId}/${topic.title.toLowerCase()}/notes`)}
             >
               <div className="flex justify-between items-start mb-3">
                 <div>
